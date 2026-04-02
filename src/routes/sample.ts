@@ -1,5 +1,5 @@
 import { type Request, type Response, Router } from "express";
-import Controllers from "@/controllers/index";
+import Controllers from "../controllers/index";
 
 export const sampleRoute = Router();
 
