@@ -14,4 +14,6 @@ const registrationSchema = new Schema({
   registeredAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 
+registrationSchema.index({ eventId: 1, leadEmail: 1 }, { unique: true });
+
 export const RegistrationModel = mongoose.models.Registration || mongoose.model("Registration", registrationSchema);
